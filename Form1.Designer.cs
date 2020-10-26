@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtbMatriz = new System.Windows.Forms.TextBox();
             this.lbMatriz1 = new System.Windows.Forms.Label();
             this.lbMatriz2 = new System.Windows.Forms.Label();
             this.lbResultado = new System.Windows.Forms.Label();
@@ -42,14 +43,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rdbGrados = new System.Windows.Forms.RadioButton();
             this.rdbRadianes = new System.Windows.Forms.RadioButton();
+            this.errorProviderTxtb = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxtb)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtbMatriz
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(403, 26);
-            this.textBox1.TabIndex = 0;
+            this.txtbMatriz.Location = new System.Drawing.Point(65, 76);
+            this.txtbMatriz.Name = "txtbMatriz";
+            this.txtbMatriz.Size = new System.Drawing.Size(403, 26);
+            this.txtbMatriz.TabIndex = 0;
             // 
             // lbMatriz1
             // 
@@ -130,6 +133,7 @@
             this.btnEnter.TabIndex = 3;
             this.btnEnter.Text = "Intro";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // label4
             // 
@@ -183,6 +187,10 @@
             this.rdbRadianes.Text = "Radianes";
             this.rdbRadianes.UseVisualStyleBackColor = true;
             // 
+            // errorProviderTxtb
+            // 
+            this.errorProviderTxtb.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -201,9 +209,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbMatriz1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbMatriz);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTxtb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,7 +220,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbMatriz;
         private System.Windows.Forms.Label lbMatriz1;
         private System.Windows.Forms.Label lbMatriz2;
         private System.Windows.Forms.Label lbResultado;
@@ -225,6 +234,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rdbGrados;
         private System.Windows.Forms.RadioButton rdbRadianes;
+        private System.Windows.Forms.ErrorProvider errorProviderTxtb;
     }
 }
 
