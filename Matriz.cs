@@ -22,17 +22,20 @@ namespace FormMatrizMultidimensionalG3
                 
             }
         }
-        public int M {
-            get => m; 
-            set {
-                if( value < 2)
+        public int M
+        {
+            get => m;
+            set
+            {
+                if (value < 2)
                 {
                     m = 2;
                 }
                 else
                 {
                     m = value;
-                }                
+                }
             }
+        }
     }
 }
