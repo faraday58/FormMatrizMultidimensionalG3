@@ -45,8 +45,21 @@ namespace FormMatrizMultidimensionalG3
             return m3;
         }
 
-
-
+        public override string ToString()
+        {
+            //1 2 3 4
+            //5 6 7 8
+            string A = "";
+            for(int i=0; i < M; i++  )
+            {
+                for(int j=0; j < N; j++)
+                {
+                    A = A + " " + this.A[i, j].ToString();
+                }
+                A = A + "\n";
+            }
+            return A;
+        }
 
     }
 }
