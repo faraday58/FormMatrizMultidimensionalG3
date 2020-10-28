@@ -61,13 +61,20 @@ namespace FormMatrizMultidimensionalG3
                     u3 = u1 + u2;
                     lbResultado.Text = u3.ToString();
                 }
-
+                errorProviderTxtb.Clear();
             }
             catch(FormatException error)
             {
                 errorProviderTxtb.SetError(txtbMatriz, error.Message);
             }
-
+            catch(NullReferenceException error)
+            {
+                errorProviderTxtb.SetError(txtbMatriz, error.Message);
+            }
+            catch(Exception error)
+            {
+                errorProviderTxtb.SetError(txtbMatriz, error.Message);
+            }
         }
     }
 }

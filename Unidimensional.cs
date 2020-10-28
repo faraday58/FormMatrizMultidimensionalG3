@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 
 namespace FormMatrizMultidimensionalG3
 {
@@ -12,6 +14,15 @@ namespace FormMatrizMultidimensionalG3
             A = new float[N];
         }        
         //Unidimensional.Leer(txtbMatriz1.Text)
+
+        public static Unidimensional Seno(Unidimensional u1,bool grados)
+        {
+            for(int i=0;i < u1.N; i++)
+            {
+                u1.A[i] = (float)Math.Sin(u1.A[i]);   
+            }
+            return u1;
+        }
         public static Unidimensional Leer(string A)
         {
             // 4,5,3,2
